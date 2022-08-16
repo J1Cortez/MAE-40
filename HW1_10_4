@@ -1,0 +1,2 @@
+% Bode Plot for 10.5 a)
+bode(tf([1 0 0],[ 0 1 1]))

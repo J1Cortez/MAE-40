@@ -1,0 +1,19 @@
+% Exercise 9.12
+% bode plot of transfer function in part a)
+% a) Proper
+bode(tf([0,1],[0 1 1]))
+% bode plot of transfer function in part b)
+% b) Improper
+bode(tf([1,-1],[0 1]))
+% bode plot of transfer function in part c)
+% c) Semiproper
+bode(tf([1 -1], [1 1]))
+% bode plot of transfer function in part d)
+% d) Improper
+bode(tf([1 101 100], [0 1 0]))
+% bode plot of transfer function in part e)
+% e) Proper
+bode(tf([1, 0],[1 101 100]))
+% bode plot of transfer function in part f)
+% f) Proper
+bode(tf([0, 1],[1, 1, 1]))

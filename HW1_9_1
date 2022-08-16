@@ -1,0 +1,68 @@
+% Define that d = 0.1
+d = 0.1;
+% Delay function
+sys = exp(-d*s)
+
+% Define the transfer function in terms of s
+s = tf('s')
+% Pade approx at N = 1
+sysx1 = pade(sys,1)
+% Find the poles and zeros of the numerator and denominator of the transfer
+% function
+p1 = pole(sysx1)
+z1 = zero(sysx1)
+% Splitting the x and y components into the real and imanginary components
+real_x1 = real(p1);
+imag_x1 = imag(p1);
+real_y1 = real(z1);
+imag_y1 = imag(z1); 
+% Plotting of the pade approx in terms of real and imaginary components
+plot(real_x1,imag_x1,'g*',real_y1,imag_y1,'bo')
+
+% Define the transfer function in terms of s
+s = tf('s')
+% Pade approx at N = 2
+sysx2 = pade(sys,2)
+% Find the poles and zeros of the numerator and denominator of the transfer
+% function
+p2 = pole(sysx2)
+z2 = zero(sysx2)
+% Splitting the x and y components into the real and imanginary components
+real_x2 = real(p2);
+imag_x2 = imag(p2);
+real_y2 = real(z2);
+imag_y2 = imag(z2); 
+% Plotting of the pade approx in terms of real and imaginary components
+plot(real_x2,imag_x2,'g*',real_y2,imag_y2,'bo')
+
+% Define the transfer function in terms of s
+s = tf('s')
+% Pade approx at N = 4
+sysx4 = pade(sys,4)
+% Find the poles and zeros of the numerator and denominator of the transfer
+% function
+p4 = pole(sysx4)
+z4 = zero(sysx4)
+% Splitting the x and y components into the real and imanginary components
+real_x4 = real(p4);
+imag_x4 = imag(p4);
+real_y4 = real(z4);
+imag_y4 = imag(z4); 
+% Plotting of the pade approx in terms of real and imaginary components
+plot(real_x4,imag_x4,'g*',real_y4,imag_y4,'bo')
+
+% Define the transfer function in terms of s
+s = tf('s')
+% Pade approx at N = 8
+sysx8 = pade(sys,8)
+% Find the poles and zeros of the numerator and denominator of the transfer
+% function
+p8 = pole(sysx8)
+z8 = zero(sysx8)
+% Splitting the x and y components into the real and imanginary components
+real_x8 = real(p8);
+imag_x8 = imag(p8);
+real_y8 = real(z8);
+imag_y8 = imag(z8); 
+% Plotting of the pade approx in terms of real and imaginary components
+plot(real_x8,imag_x8,'g*',real_y8,imag_y8,'bo')
