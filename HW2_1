@@ -1,0 +1,11 @@
+syms V0 V1 V2 I0 Ia Ib Ic Id Ra Rd Cb Cc s C R
+Ra = 2*R 
+Cb = C
+Cc = Cb
+Rd = R/2
+
+A = [1 0 0 Ra 0 0 0; Cc*s -Cc*s 0 0 0 1 0; 0 -1 0 0 0 0 Rd; 0 Cb*s 0 0 1 0 0; 0 0 0 0 -1 1 -1; 0 0 1 1 -1 -1 0; 0 0 0 1 0 -1 0]
+b = [V0; 0; 0; Cb*s*V0; 0; 0; 0]
+x = A\b
+
+bode(tf([1 -1 1], [1 -3 1]))
