@@ -1,0 +1,4 @@
+syms Vmi Vpl Vin Iin Iout R f 
+A = [1 0 R 0; -1 0 0 R/f; 0 0 -1 1; 1 -1 0 0]
+b = [Vin; 0; 0; 0]
+x = A\b
