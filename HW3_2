@@ -1,0 +1,6 @@
+syms C1 C2 R1 R2 s Vin 
+A = [R1 0 0 0 1 0; 0 1 0 0 C1*s 0; 0 0 R2 0 -1 1; 0 0 0 1 -C2*s C2*s; 1 1 -1 -1 0 0; 0 0 0 0 1 0]
+b = [Vin; C1*s*Vin; 0; 0; 0; 0]
+x = A\b
+Vout = x(6)
+H = simplify(Vout/Vin)
